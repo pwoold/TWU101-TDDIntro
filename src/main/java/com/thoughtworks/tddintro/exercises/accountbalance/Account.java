@@ -8,10 +8,15 @@ public class Account {
         balance = newBalance;
     }
 
-    public void deposit(int i) {
-        balance = balance + i;
-    }
     public int getBalance() {
         return balance;
+    }
+
+    public void deposit(int amount) {
+        balance = balance + amount;
+    }
+
+    public void withdraw(int amount) {
+        balance = balance - amount;
     }
 }
