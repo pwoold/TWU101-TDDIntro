@@ -5,6 +5,6 @@ public class Factorial {
         if (i < 2) {
             return 1;
         }
-        return 2;
+        return i*compute(i-1);
     }
 }
