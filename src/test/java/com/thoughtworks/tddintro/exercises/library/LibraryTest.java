@@ -32,20 +32,18 @@ public class LibraryTest {
     }
 
     @Test
-    @Ignore // Remove each @Ignore and implement test
     public void shouldPrintBookTitleWhenThereIsOneBook() {
         String title = "Book Title";
         books.add(title);
-
         library.listBooks();
-
+        verify(printStream).println("Book Title\n");
         // add a verify statement here that shows that the book title was printed by the printStream
     }
 
     @Test
-    @Ignore // Remove each @Ignore and implement test
     public void shouldPrintNothingWhenThereAreNoBooks() {
-
+        library.listBooks();
+        verify(printStream).println("");
         // implement me
     }
 
